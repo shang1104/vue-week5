@@ -107,37 +107,34 @@
     <!-- 表單 -->
     <div class="my-5 row justify-content-center">
       <v-form v-slot="{ errors }" @submit="onSubmit" class="col-md-6" ref="form">
-        <!-- <div class="mb-3">
-          <label for="tel" class="form-label">收件人姓名</label>
-          <v-field id="name" name="姓名" type="text" class="form-control " placeholder="請輸入 姓名" rules="required"
-            :class="{'is-invalid' : errors['姓名']}"></v-field>
-          <error-message name="姓名" class="invalid-feedback"></error-message>
-        </div> -->
         <div class="mb-3">
-          <label for="phone" class="form-label">電話</label>
-          <v-field id="phone" name="電話" type="text" class="form-control" placeholder="請輸入電話"
-            :class="{ 'is-invalid': errors['電話'] }" :rules="isPhone"></v-field>
-          <error-message name=" 電話" class="invalid-feedback"></error-message>
+          <label for="email" class="form-label">信箱</label>
+          <v-field id="email" name="信箱" type="email" class="form-control" placeholder="請輸入 Email"
+            :class="{ 'is-invalid': errors['信箱'] }" rules="email|required"></v-field>
+          <error-message name="信箱" class="invalid-feedback"></error-message>
         </div>
-        <!-- <div class="mb-3">
+        <div class="mb-3">
+          <label for="name" class="form-label">收件人姓名</label>
+          <v-field id="name" name="姓名" type="text" class="form-control " placeholder="請輸入姓名"
+            :class="{'is-invalid' : errors['姓名']}" rules="required"></v-field>
+          <error-message name="姓名" class="invalid-feedback"></error-message>
+        </div>
+        <div class="mb-3">
           <label for="tel" class="form-label">收件人電話</label>
-          <v-filed>
-            <div id="tel" name="電話" type="text" :class="{ 'is-invalid':errors:['電話'] }" placeholder="請輸入電話"
-              rules="required|min:8|max:10" v-model="user.tel">
-            </div>
-          </v-filed>
-          <error-message name="電話" class="invalid-feedback"></error-message>
+          <v-field id="tel" name="收件人電話" type="text" class="form-control" placeholder="請輸入電話"
+            :class="{ 'is-invalid' :errors['收件人電話'] }" rules="required|min:8|max:10"></v-field>
+          <error-message name="收件人電話" class="invalid-feedback"></error-message>
         </div>
         <div class="mb-3">
           <label for="address" class="form-label">收件人地址</label>
-          <div id="address" name="地址" type="text" :class="{ 'is-invalid':errors:['地址'] }" placeholder="請輸入地址"
-            rules="required" v-model="user.address"></div>
+          <v-field id="address" name="地址" type="text" class="form-control" placeholder="請輸入地址"
+            :class="{ 'is-invalid' :errors['地址'] }" rules="required"></v-field>
           <error-message name="地址" class="invalid-feedback"></error-message>
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">留言</label>
           <textarea name="" id="message" class="form-control" cols="30" rows="10"></textarea>
-        </div> -->
+        </div>
         <div class="text-end">
           <button type="submit" class="btn btn-danger">送出訂單</button>
         </div>
@@ -189,16 +186,12 @@
         </div>
       </div>
     </script>
-<!-- vaildata -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vee-validate/4.5.8/vee-validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@vee-validate/rules@4.5.8/dist/vee-validate-rules.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@vee-validate/i18n@4.5.8/dist/vee-validate-i18n.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/vue@next"></script>
-<!--  -->
-<script src="https://unpkg.com/vee-validate@next"></script> -->
+<!-- vaildata 以下三隻-->
+<script src="https://unpkg.com/vee-validate@next"></script>
 <script src="https://unpkg.com/@vee-validate/i18n@4.1.0"></script>
 <script src="https://unpkg.com/@vee-validate/rules"></script>
 <!-- JavaScript Bundle with Popper -->

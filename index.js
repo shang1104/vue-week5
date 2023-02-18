@@ -58,7 +58,7 @@ const productModal = {
   }
 }
 
-const app = createApp({
+const app = Vue.createApp({
   data() {
     return {
       products: [],
